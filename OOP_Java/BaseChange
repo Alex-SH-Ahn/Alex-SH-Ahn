@@ -1,0 +1,42 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+// 2023.11.29 10:43
+
+class NumChange {
+    static int num;
+    static String strNum;
+    static int base;
+    static int to;
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int tc = sc.nextInt();
+
+        while (tc-- > 0) {
+            base = sc.nextInt();
+            strNum = sc.next(); //문자열로 입력받음
+
+            // try {
+            if (base != 10) num = Integer.parseInt(strNum, base); //10진수가 아니면 10진수로 변환
+            else num = Integer.valueOf(strNum); // 문자열을 정수형으로 변환
+            // } catch (NumberFormatException e) {
+            //     System.out.println("Wrong Input");
+            //     continue;
+            // }
+
+            System.out.println("num: "+num);
+            to = sc.nextInt(); //몇진수로 바꿀건지?
+
+            if (to == 10) System.out.println(num); // 10진수면 그냥 출력
+            else if (to == 2) System.out.println(Integer.toBinaryString(num)); // 10진수를 2진수로
+            else if (to == 8) System.out.println(Integer.toOctalString(num)); // 10진수를 8진수로
+            else if (to == 16) System.out.println(Integer.toHexString(num)); //10진수를 16진수로
+            else { //2, 8, 10, 16진수가 아닌 숫자 변환
+                System.out.println(Integer.toString(num, to));
+            }
+        }
+
+        sc.close();
+    }
+}
