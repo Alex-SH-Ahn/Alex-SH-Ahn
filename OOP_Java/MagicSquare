@@ -1,0 +1,54 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+// 2023.11.29 13:35
+
+class MagicSquare {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int tc = sc.nextInt();
+
+        while (tc-- > 0) {
+            int n = sc.nextInt(); //마방진의 크기
+
+            int[][] arr = new int[n][n]; //n*n짜리 마방진 만들기
+
+            int in = 1; // 마방진에 넣을 숫자
+            int row = 0;
+            int half = n/2;
+            int col = half;
+            
+            arr[row][col] = in; // 첫번째 열 중간 1 넣기
+            while (++in <= (n*n)) { // 1부터 n*n까지
+                System.out.println("in: "+in);
+                int tempR = row;
+                int tempC = col;
+                row--; //1행 위로
+                col++; //1열 오른쪽으로 
+                
+                if (row < 0) row = (n-1); //행이 n보다 작으면 행은 n-1(맨끝)
+                if (col < 0) col = (n-1);
+                if (col >= n) col = 0;
+
+                if (arr[row][col] != 0) {
+                    row = tempR + 1; //초기값에서 한 줄 내려가기
+                    col = tempC; //초기값으로 돌아가기
+                };
+                
+                System.out.printf("[%d, %d]", row, col);
+                System.out.println();
+                arr[row][col] = in;
+            }
+
+            for (int i = 0; i < n; i++) {
+                for(int j = 0; j < arr[i].length; j++) {
+                    System.out.print(arr[i][j]+" ");
+                }
+                System.out.println();
+            }
+        }
+
+        sc.close();
+    }
+}
