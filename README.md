@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @Alex-SH-Ahn
 - 👀 I’m interested in ... Computer Programming... (still not sure which path to pursue)
-- 🌱 I’m currently learning ... Java, Python, Arduino, Discrete Mathematics
+- 🌱 I’m currently learning ... HTML, CSS, JS, React.js
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me ... alex2321218@gmail.com
 
