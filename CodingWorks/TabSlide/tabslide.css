@@ -1,0 +1,76 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+	font-family: /* 'Noto Sans KR', */ 'Montserrat'/* , 'Raleway' */, sans-serif;
+	color: black;
+	font-size: 15px;
+	line-height: 1.5em;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a {
+    color: #222;
+	text-decoration: none;
+}
+img {
+    height: 320px;
+    width: 252px;
+}
+
+.tab-inner {
+    border: 1px solid red;
+    width: 252px;
+    height: 360px;
+}
+input[name=tabmenu] {
+    display: none;
+}
+.slide {
+    position: relative;
+    width: 252px;
+    height: 320px; /* 높이값이 없어서 height가 없으면 버튼이 사라짐 */
+    overflow: hidden;
+}
+.slide-inner {
+    position: absolute;
+    border: 1px solid red;
+    width: 756px;
+    height: 320px;
+    font-size: 0;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.btn {
+    text-align: center;
+}
+.btn label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: lightgray;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+input[id=tab1]:checked ~ .slide .slide-inner { left: 0; }
+input[id=tab2]:checked ~ .slide .slide-inner { left: -252px; }
+input[id=tab3]:checked ~ .slide .slide-inner { left: -504px; }
+
+input[id=tab1]:checked ~ .btn label[for=tab1],
+input[id=tab2]:checked ~ .btn label[for=tab2],
+input[id=tab3]:checked ~ .btn label[for=tab3]
+{ background-color: crimson; }

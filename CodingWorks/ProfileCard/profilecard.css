@@ -1,0 +1,84 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+	font-family: /* 'Noto Sans KR', 'Montserrat', */ 'Raleway', sans-serif;
+	color: black;
+	font-size: 15px;
+	line-height: 1.5em;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a {
+    color: #222;
+	text-decoration: none;
+}
+img {
+    width: 400px;
+    height: 600px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    margin: 10px;
+    position: relative;
+    width: 400px;
+    height: 600px;
+    overflow: hidden;
+}
+.content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to top, crimson, transparent);
+    color: white;
+    text-align: center;
+    padding-top: 380px;
+    transition: .3s;
+}
+.content h2 span {
+    display: block;
+    font-size: 14px;
+    color: gold;
+    margin-top: 5px;
+}
+.content h2 { font-size: 30px;}
+.sns a { 
+    color: white;  
+    border: 1px solid white;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.card:hover .content {
+    top: 0;
+}
+.card:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 10px 20px rgb(0, 0, 0, 0.4);
+}

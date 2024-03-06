@@ -1,0 +1,108 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+	font-family: /* 'Noto Sans KR', */ 'Montserrat'/* , 'Raleway' */, sans-serif;
+	color: black;
+	font-size: 15px;
+	line-height: 1.5em;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a {
+    color: #222;
+	text-decoration: none;
+}
+img {
+    height: 320px;
+    width: 252px;
+}
+
+.tab-inner {
+    width: 252px;
+    height: 355px;
+    position: relative;
+    border: 1px solid red;
+    overflow: hidden;
+}
+input[name=tabmenu] {
+    display: none;
+}
+.content {
+    /* display: none; */
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    visibility: hidden;
+    left: -50px;
+}
+.btn {
+    position: absolute; /* 포지션 앱솔루트시 인라인요소로 변경, 너비값이 사라지게 되므로 가운데정렬이 되지 않음, 너비100%로 맞추면 tacenter가 작동됨 */
+    text-align: center; /* 중요!! */
+    width: 100%;
+    bottom: 0;
+}
+.btn label {
+    background-color: lightgray;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.text1, .text2, .text3 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 25px;
+    box-sizing: border-box;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: 0.5s;
+}
+.text1 span, .text2 span, .text3 span {
+    font-size: 20px;
+    display: block;
+    margin-top: 10px;
+}
+.text2 { background-color: dodgerblue; }
+.text3 { background-color: yellowgreen; }
+
+input[id=tab1]:checked ~ .slide1, 
+input[id=tab2]:checked ~ .slide2,
+input[id=tab3]:checked ~ .slide3 {
+    opacity: 1; 
+    visibility: visible;
+    left: 0;
+}
+
+input[id=tab1]:checked ~ .btn label[for=tab1],
+input[id=tab2]:checked ~ .btn label[for=tab2],
+input[id=tab3]:checked ~ .btn label[for=tab3] { background-color: crimson; }
+
+input[id=tab1]:checked ~ .heading .text1,
+input[id=tab2]:checked ~ .heading .text2,
+input[id=tab3]:checked ~ .heading .text3 { 
+    transition-delay: 0.3s;
+    transform: translateY(0);
+    opacity: 1; 
+}
