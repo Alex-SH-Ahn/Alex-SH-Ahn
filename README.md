@@ -10,5 +10,5 @@ You can click the Preview link to take a look at your changes.
 --->
 
 <a href="https://github.com/devxb/gitanimals">
-  <img src="https://render.gitanimals.org/lines/{Alex-SH-Ahn}?pet-id=1" width="1000" height="120"/>
+  <img src="https://render.gitanimals.org/farms/{Alex-SH-Ahn}"/>
 </a>
