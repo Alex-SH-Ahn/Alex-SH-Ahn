@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Alex (Sohyun) Ahn</h1>
 <h3 align="center">A passionate frontend developer from South Korea</h3>
 
-- 🌱 I’m currently learning **React, React Native**
+- 🌱 I’m currently learning **React**
 
 - 📫 How to reach me **alex2321218@gmail.com**
 
