@@ -22,10 +22,10 @@
 
 <p><img src="https://github-readme-stats.vercel.app/api/top-langs?username=alex-sh-ahn&show_icons=true&locale=en&layout=compact" alt="alex-sh-ahn" /></p>
 
-<a href="https://github.com/devxb/gitanimals">
+<a align="left" href="https://github.com/devxb/gitanimals">
   <img
     src="https://render.gitanimals.org/farms/Alex-SH-Ahn"
-    width="600"
-    height="300"
+    width="800"
+    height="400"
   />
 </a>
