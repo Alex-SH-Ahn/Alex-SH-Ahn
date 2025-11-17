@@ -30,10 +30,10 @@
 
 <!-- <p><img src="https://github-readme-stats.vercel.app/api/top-langs?username=alex-sh-ahn&show_icons=true&locale=en" alt="alex-sh-ahn" /></p> --!>
 
-<a align="left" href="https://github.com/devxb/gitanimals">
-  <img
-    src="https://render.gitanimals.org/farms/Alex-SH-Ahn"
-    width="800"
-    height="400"
-  />
+<a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=Alex-SH-Ahn&utm_content=farm">
+<img
+  src="https://render.gitanimals.org/farms/Alex-SH-Ahn"
+  width="600"
+  height="300"
+/>
 </a>
